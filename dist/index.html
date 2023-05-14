@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Todo app</title>
   <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
   <style>
     .attribution {
       font-size: 11px;
@@ -19,42 +20,56 @@
   </style>
 </head>
 
-<body class="font-jose">
+<body class="font-jose bg-vlgb dark:bg-darkvdb">
 
-  <header class="bg-slate-400 h-60">
-    <section class="pt-10 flex container justify-between items-center">
-      <h1 class="font-semibold text-[1.6rem] text-white tracking-[0.6rem] ">TODO</h1>
-      <img class="w-5 h-5" src="../images/icon-moon.svg" alt="">
+  <header
+    class="bg-mobile md:bg-desktop md:h-[18rem] bg-no-repeat bg-cover h-[13rem] dark:bg-dark-mobile md:dark:bg-dark-desktop">
+    <section class="pt-12 container md:pt-16">
+      <h1 class="font-semibold text-[1.6rem] text-white tracking-[0.6rem]">TODO</h1>
+
+      <!-- MOON ICON -->
+      <img class="w-5 fill-vlg dark:hidden cursor-pointer" src="../images/icon-moon.svg" alt="moon icon">
+      <!-- SUN ICON -->
+      <img class="w-5 h-5 fill-vlg hidden dark:block cursor-pointer" src="../images/icon-sun.svg" alt="sun icon">
+
     </section>
   </header>
-  <main>
+  <main class="absolute top-[10rem] w-full">
     <!-- TODO input field -->
-    <ul class="">
-      <li class="container">
-        <input class="todo__input" type="text" placeholder="Create a new todo">
+    <ul>
+      <li class="container todo rounded-md px-8 text-darkvdgb dark:text-darkdgb">
+        <input class="bg-transparent w-full h-10 stroke-none outline-none text-sm" type="text"
+          placeholder="Create a new todo">
       </li>
     </ul>
-    <!-- TODO lists -->
-    <ul class="">
-      <li class="">
-        <p></p>
-        <img src="../images/icon-cross.svg" alt="">
-      </li>
-    </ul>
-  </main>
 
-  <footer>
-    <section>
-      <p>All</p>
+    <!-- TODO lists -->
+    <ul class="text-darkvdgb dark:text-darkdgb list-disc mt-4 list-image-[url(../images/icon-check.svg)] text-sm">
+      <li class="container todo rounded-t-md rounded-b-none mb-6 px-8">
+        <p>Jog around the park 3s</p>
+        <img class="w-3.5" src="../images/icon-cross.svg" alt="">
+      </li>
+      <li class="container todo px-4 rounded-b-md rounded-t-none text-darkvdgb dark:text-darkdgb text-xs">
+        <p>5 items left</p>
+        <p>Clear Completed</p>
+      </li>
+    </ul>
+
+    <section
+      class="flex items-center justify-center gap-4 bg-vlg h-12 rounded-md text-darkvdgb dark:text-darkdgb text-sm font-bold w-[85%] max-w-[500px] m-auto mt-4 dark:bg-darkvddb">
+      <p class="text-bright-blue">All</p>
       <p>Active</p>
       <p>Completed</p>
     </section>
 
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+    <div class="mt-8 text-xs text-center dark:text-darkdgb">
+      Challenge by <a class="text-bright-blue" href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank">Frontend Mentor</a>.
+      Coded by <a class="text-bright-blue" href="#">Victor Umeokoli</a>.
     </div>
-  </footer>
+  </main>
+
+
 </body>
 
 <!-- Add dynamic number items left -->
