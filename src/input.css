@@ -4,5 +4,8 @@
 @tailwind utilities;
 
 .container {
-  @apply w-[82%] max-w-[420px] m-auto;
+  @apply w-[85%] max-w-[430px] m-auto mb-0.5 flex justify-between items-center;
+}
+.todo {
+  @apply bg-vlg dark:bg-darkvddb h-12;
 }
